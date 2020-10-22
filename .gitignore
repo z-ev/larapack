@@ -13,3 +13,7 @@ yarn-error.log
 
 # iDE
 .idea/
+
+# Docker (Nginx logs)
+/public/access-nginx.log
+/public/error-nginx.log

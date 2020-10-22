@@ -1,0 +1,25 @@
+# Nginx configuration
+
+server {
+
+    listen 80 default_server;
+    server_name ${SERVER_NAME} www.${SERVER_NAME};
+
+    error_log  ${PROJECT_PATCH}/${ROOT}/error-nginx.log;
+    access_log ${PROJECT_PATCH}/${ROOT}/access-nginx.log;
+
+    location ~* \.(gif|jpg|jpeg|png|css|ico|html)$ {
+        root ${PROJECT_PATCH}/${ROOT};
+    }
+
+    location / {
+        proxy_set_header X-Real-IP  $remote_addr;
+        proxy_set_header X-Forwarded-For $remote_addr;
+        proxy_set_header Host $host;
+        proxy_pass http://${NODEJS_HOST}:3000;
+    }
+
+    location ~ /\.ht {
+        deny all;
+    }
+}
