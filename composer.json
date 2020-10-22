@@ -1,7 +1,8 @@
 {
-    "name": "laravel/laravel",
+    "name": "darkjinnee/larapack",
+    "version": "1.0.0",
     "type": "project",
-    "description": "The Laravel Framework.",
+    "description": "Quick start create package laravel",
     "keywords": [
         "framework",
         "laravel"
