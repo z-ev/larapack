@@ -6,7 +6,7 @@ Quick start create package laravel
 
 ### Docker
 ```bash
-echo -e "$(cat .env.example)\n$(cat .env.docker)" >> .env \
+cp .env.example .env \
 && docker-compose up --build
 ```
 ### Add string host's file
