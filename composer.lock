@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9a582c66a342c2f2017380c434c850be",
+    "content-hash": "5805b7c58139b780800f8a121e09a80c",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -109,6 +109,63 @@
                 }
             ],
             "time": "2020-08-18T23:57:15+00:00"
+        },
+        {
+            "name": "darkjinnee/footing",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "/var/www/larapack/packages/Darkjinnee/Footing",
+                "reference": "a14201732e78d8723bb12e369f58e95878c29991"
+            },
+            "require": {
+                "illuminate/support": "~7|~8"
+            },
+            "require-dev": {
+                "orchestra/testbench": "~5|~6",
+                "phpunit/phpunit": "~9.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Darkjinnee\\Footing\\FootingServiceProvider"
+                    ],
+                    "aliases": {
+                        "Footing": "Darkjinnee\\Footing\\Facades\\Footing"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Darkjinnee\\Footing\\": "src/"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Darkjinnee\\Footing\\Tests\\": "tests"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Dark Jinnee",
+                    "email": "darkjinnee@gmail.com",
+                    "homepage": "https://github.com/darkjinnee"
+                }
+            ],
+            "description": ":package_description",
+            "homepage": "https://github.com/darkjinnee/footing",
+            "keywords": [
+                "Footing",
+                "Laravel"
+            ],
+            "transport-options": {
+                "symlink": true,
+                "relative": false
+            }
         },
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -7255,7 +7312,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "darkjinnee/footing": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
