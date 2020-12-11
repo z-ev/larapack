@@ -14,7 +14,7 @@ trait HasPermissions
      * @param array $permissionsId
      * @return mixed
      */
-    public function attachPermissions(array $permissionsId)
+    public function attachPermissions(array $permissionsId = [])
     {
         return $this->permissions()->attach($permissionsId);
     }
@@ -31,7 +31,7 @@ trait HasPermissions
      * @param array $permissionsId
      * @return mixed
      */
-    public function detachPermissions(array $permissionsId)
+    public function detachPermissions(array $permissionsId = [])
     {
         return $this->permissions()->detach($permissionsId);
     }
@@ -40,7 +40,7 @@ trait HasPermissions
      * @param array $permissionsId
      * @return mixed
      */
-    public function syncPermissions(array $permissionsId)
+    public function syncPermissions(array $permissionsId = [])
     {
         return $this->permissions()->sync($permissionsId);
     }

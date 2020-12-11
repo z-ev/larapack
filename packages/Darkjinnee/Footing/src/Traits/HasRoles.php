@@ -14,7 +14,7 @@ trait HasRoles
      * @param array $rolesId
      * @return mixed
      */
-    public function attachRoles(array $rolesId)
+    public function attachRoles(array $rolesId = [])
     {
         return $this->roles()->attach($rolesId);
     }
@@ -31,7 +31,7 @@ trait HasRoles
      * @param array $rolesId
      * @return mixed
      */
-    public function detachRoles(array $rolesId)
+    public function detachRoles(array $rolesId = [])
     {
         return $this->roles()->detach($rolesId);
     }
@@ -40,7 +40,7 @@ trait HasRoles
      * @param array $rolesId
      * @return mixed
      */
-    public function syncRoles(array $rolesId)
+    public function syncRoles(array $rolesId = [])
     {
         return $this->roles()->sync($rolesId);
     }
